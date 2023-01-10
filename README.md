@@ -26,7 +26,9 @@ Otherwise:
 `pip install onnxruntime`
 
 # ONNX model
-You can conver the model using the following code after installing ultralitics (`pip install ultralytics`):
+Use the Google Colab notebook to convert the model: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1-yZg6hFg27uCPSycRCRtyezHhq_VAHxQ?usp=sharing)
+
+You can convert the model using the following code after installing ultralitics (`pip install ultralytics`):
 ```
 from ultralytics import YOLO
 
@@ -52,14 +54,14 @@ The original YOLOv8 model can be found in this repository: [YOLOv8 Repository](h
  python webcam_object_detection.py
  ```
 
- * **Video inference**: https://youtu.be/yYo0XQp97vo
+ * **Video inference**: https://youtu.be/JShJpg8Mf7M
  ```
  python video_object_detection.py
  ```
 
-[//]: # ( ![!YOLOv8 detection video]&#40;https://github.com/ibaiGorordo/ONNX-YOLOv8-Object-Detection/blob/main/doc/img/yolov8_video.gif&#41;)
+ ![!YOLOv8 detection video](https://github.com/ibaiGorordo/ONNX-YOLOv8-Object-Detection/blob/main/doc/img/yolov8_video.gif)
 
-[//]: # (  *Original video: https://youtu.be/zPre8MgmcHY*)
+  *Original video: https://youtu.be/Snyg0RqpVxY*
 
 # References:
 * YOLOv8 model: https://github.com/ultralytics/ultralytics
