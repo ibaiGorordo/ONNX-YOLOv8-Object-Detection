@@ -1,7 +1,7 @@
 # ONNX YOLOv8 Object Detection
  Python scripts performing object detection using the YOLOv8 model in ONNX.
 
-![! ONNX YOLOv8 Object Detection](https://github.com/ibaiGorordo/ONNX-YOLOv8-Object-Detection/blob/main/doc/img/detected_objects.jpg)
+![! ONNX YOLOv8 Object Detection](https://github.com/ibaiGorordo/ONNX-YOLOv8-Object-Detection/raw/main/doc/img/detected_objects.jpg)
 *Original image: https://www.flickr.com/photos/nicolelee/19041780*
 
 # Important
@@ -13,7 +13,7 @@
  * For ONNX, if you have a NVIDIA GPU, then install the **onnxruntime-gpu**, otherwise use the **onnxruntime** library.
 
 # Installation
-```
+```shell
 git clone https://github.com/ibaiGorordo/ONNX-YOLOv8-Object-Detection.git
 cd ONNX-YOLOv8-Object-Detection
 pip install -r requirements.txt
@@ -29,7 +29,7 @@ Otherwise:
 Use the Google Colab notebook to convert the model: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1-yZg6hFg27uCPSycRCRtyezHhq_VAHxQ?usp=sharing)
 
 You can convert the model using the following code after installing ultralitics (`pip install ultralytics`):
-```
+```python
 from ultralytics import YOLO
 
 model = YOLO("yolov8m.pt") 
@@ -45,21 +45,21 @@ The original YOLOv8 model can be found in this repository: [YOLOv8 Repository](h
 # Examples
 
  * **Image inference**:
- ```
+ ```shell
  python image_object_detection.py
  ```
 
  * **Webcam inference**:
- ```
+ ```shell
  python webcam_object_detection.py
  ```
 
  * **Video inference**: https://youtu.be/JShJpg8Mf7M
- ```
+ ```shell
  python video_object_detection.py
  ```
 
- ![!YOLOv8 detection video](https://github.com/ibaiGorordo/ONNX-YOLOv8-Object-Detection/blob/main/doc/img/yolov8_video.gif)
+ ![!YOLOv8 detection video](https://github.com/ibaiGorordo/ONNX-YOLOv8-Object-Detection/raw/main/doc/img/yolov8_video.gif)
 
   *Original video: https://youtu.be/Snyg0RqpVxY*
 
