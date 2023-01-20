@@ -2,7 +2,7 @@
  Python scripts performing object detection using the YOLOv8 model in ONNX.
 
 ![! ONNX YOLOv8 Object Detection](https://github.com/ibaiGorordo/ONNX-YOLOv8-Object-Detection/raw/main/doc/img/detected_objects.jpg)
-*Original image: https://www.flickr.com/photos/nicolelee/19041780*
+*Original image: [https://www.flickr.com/photos/nicolelee/19041780](https://www.flickr.com/photos/nicolelee/19041780)*
 
 # Important
 - The input images are directly resized to match the input size of the model. I skipped adding the pad to the input image, it might affect the accuracy of the model if the input image has a different aspect ratio compared to the input size of the model. Always try to get an input size with a ratio close to the input images you will use.
@@ -61,12 +61,12 @@ The original YOLOv8 model can be found in this repository: [YOLOv8 Repository](h
 
  ![!YOLOv8 detection video](https://github.com/ibaiGorordo/ONNX-YOLOv8-Object-Detection/raw/main/doc/img/yolov8_video.gif)
 
-  *Original video: https://youtu.be/Snyg0RqpVxY*
+  *Original video: [https://youtu.be/Snyg0RqpVxY](https://youtu.be/Snyg0RqpVxY)*
 
 # References:
-* YOLOv8 model: https://github.com/ultralytics/ultralytics
-* YOLOv5 model: https://github.com/ultralytics/yolov5
-* YOLOv6 model: https://github.com/meituan/YOLOv6
-* YOLOv7 model: https://github.com/WongKinYiu/yolov7
-* PINTO0309's model zoo: https://github.com/PINTO0309/PINTO_model_zoo
-* PINTO0309's model conversion tool: https://github.com/PINTO0309/openvino2tensorflow
+* YOLOv8 model: [https://github.com/ultralytics/ultralytics](https://github.com/ultralytics/ultralytics)
+* YOLOv5 model: [https://github.com/ultralytics/yolov5](https://github.com/ultralytics/yolov5)
+* YOLOv6 model: [https://github.com/meituan/YOLOv6](https://github.com/meituan/YOLOv6)
+* YOLOv7 model: [https://github.com/WongKinYiu/yolov7](https://github.com/WongKinYiu/yolov7)
+* PINTO0309's model zoo: [https://github.com/PINTO0309/PINTO_model_zoo](https://github.com/PINTO0309/PINTO_model_zoo)
+* PINTO0309's model conversion tool: [https://github.com/PINTO0309/openvino2tensorflow](https://github.com/PINTO0309/openvino2tensorflow)
