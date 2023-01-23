@@ -1,5 +1,4 @@
-# ONNX YOLOv8 Object Detection
- Python scripts performing object detection using the YOLOv8 model in ONNX.
+Python scripts performing object detection using the YOLOv8 model in ONNX.
 
 ![! ONNX YOLOv8 Object Detection](https://github.com/ibaiGorordo/ONNX-YOLOv8-Object-Detection/raw/main/doc/img/detected_objects.jpg)
 *Original image: [https://www.flickr.com/photos/nicolelee/19041780](https://www.flickr.com/photos/nicolelee/19041780)*
