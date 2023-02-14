@@ -27,7 +27,6 @@ class YOLOv8:
         self.get_output_details()
         print("Used device: {}".format(onnxruntime.get_device()))
 
-
     def detect_objects(self, image):
         input_tensor = self.prepare_input(image)
 
@@ -52,7 +51,6 @@ class YOLOv8:
         input_tensor = input_img[np.newaxis, :, :, :].astype(np.float32)
 
         return input_tensor
-
 
     def inference(self, input_tensor):
         start = time.perf_counter()
@@ -96,7 +94,6 @@ class YOLOv8:
         return boxes
 
     def rescale_boxes(self, boxes):
-
         # Rescale boxes to original image dimensions
         input_shape = np.array([self.input_width, self.input_height, self.input_width, self.input_height])
         boxes = np.divide(boxes, input_shape, dtype=np.float32)
@@ -104,7 +101,6 @@ class YOLOv8:
         return boxes
 
     def draw_detections(self, image, draw_scores=True, mask_alpha=0.4):
-
         return draw_detections(image, self.boxes, self.scores,
                                self.class_ids, mask_alpha)
 
@@ -136,7 +132,7 @@ if __name__ == '__main__':
     yolov7_detector(img)
 
     # Draw detections
-    combined_img = yolov7_detector.draw_detections(img)
+    combined_img, _ = yolov7_detector.draw_detections(img)
     cv2.namedWindow("Output", cv2.WINDOW_NORMAL)
     cv2.imshow("Output", combined_img)
     cv2.waitKey(0)
