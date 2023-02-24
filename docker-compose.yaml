@@ -1,0 +1,8 @@
+version: '3'
+services:
+  fastapi_yolov8:
+    build: .
+    restart: "always"
+    working_dir: /app/onnx
+    network_mode: host
+    command: uvicorn api_object_detection:app --reload --host 0.0.0.0 --port 8001
