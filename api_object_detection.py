@@ -8,12 +8,13 @@ from fastapi.responses import StreamingResponse
 from fastapi.responses import JSONResponse
 import cv2
 import io
-
+import os
 from yolov8 import YOLOv8, utils
 
 # Initialize yolov8 object detector
-model_path = "models/yolov8m.onnx"
-yolov8_detector = YOLOv8(model_path, conf_thres=0.51, iou_thres=0.1)
+model_path = os.getenv('MODEL_PATH', default="models/yolov8x.onnx")
+print("Load model from {}".format(model_path))
+yolov8_detector = YOLOv8(model_path, conf_thres=0.1, iou_thres=0.1)
 
 
 def load_image_from_file(file):
