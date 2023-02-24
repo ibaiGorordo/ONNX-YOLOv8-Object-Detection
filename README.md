@@ -1,5 +1,12 @@
-![! ONNX YOLOv8 Object Detection](https://github.com/ibaiGorordo/ONNX-YOLOv8-Object-Detection/raw/main/doc/img/detected_objects.jpg)
+![! ONNX YOLOv8 Object Detection with RESTAPI](doc/img/detected_objects.jpg)
 *Original image: [https://www.flickr.com/photos/nicolelee/19041780](https://www.flickr.com/photos/nicolelee/19041780)*
+
+# ONNX YOLOv8 Object Detection with RESTAPI
+This repo
+- ... is a fork of https://github.com/ibaiGorordo/ONNX-YOLOv8-Object-Detection. Thanks to the author!
+- ... includes a RESTAPI (FastApi) implementation to run YOLOv8 on a single image.
+- ... adds unique id's to very object.
+- ... builds a docker container to easily run the scripts.
 
 # Important
 - The input images are directly resized to match the input size of the model. I skipped adding the pad to the input image, it might affect the accuracy of the model if the input image has a different aspect ratio compared to the input size of the model. Always try to get an input size with a ratio close to the input images you will use.
