@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 import onnxruntime
 
-from yolov8.utils import xywh2xyxy, nms, draw_detections
+from yolov8.utils import xywh2xyxy, draw_detections, multiclass_nms
 
 
 class YOLOv8:
@@ -20,8 +20,7 @@ class YOLOv8:
 
     def initialize_model(self, path):
         self.session = onnxruntime.InferenceSession(path,
-                                                    providers=['CUDAExecutionProvider',
-                                                               'CPUExecutionProvider'])
+                                                    providers=onnxruntime.get_available_providers())
         # Get model info
         self.get_input_details()
         self.get_output_details()
@@ -78,7 +77,8 @@ class YOLOv8:
         boxes = self.extract_boxes(predictions)
 
         # Apply non-maxima suppression to suppress weak, overlapping bounding boxes
-        indices = nms(boxes, scores, self.iou_threshold)
+        # indices = nms(boxes, scores, self.iou_threshold)
+        indices = multiclass_nms(boxes, scores, class_ids, self.iou_threshold)
 
         return boxes[indices], scores[indices], class_ids[indices]
 
